@@ -1,0 +1,5 @@
+com/doadornet/controller/DoadorController.class
+com/doadornet/App.class
+com/doadornet/service/DoadorService.class
+com/doadornet/repository/DoadorRepository.class
+com/doadornet/entity/Doador.class

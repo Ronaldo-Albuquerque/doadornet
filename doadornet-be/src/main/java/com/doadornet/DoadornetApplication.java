@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DoadornetApplication {
     public static void main(String[] args) throws InterruptedException {
 
-        System.out.println(">>>>>>>>>> Entrando na aplicação DoadornetApplication backend");
+        System.out.println("Entrando na aplicação DoadorNet backend");
         SpringApplication.run(DoadornetApplication.class, args);
     }
 }

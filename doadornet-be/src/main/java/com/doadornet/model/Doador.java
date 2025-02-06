@@ -84,8 +84,6 @@ public class Doador {
     public void setDataNasc(String dataNasc) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.dataNasc = LocalDate.parse(dataNasc, formatter);
-        System.out.println(">>>>>>>>>>>>>>>>> data de nascimento recebida: " + dataNasc);
-        // this.dataNasc = dataNasc;
     }
     public String getSexo() {
         return sexo;

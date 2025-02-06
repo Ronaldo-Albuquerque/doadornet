@@ -216,8 +216,7 @@ class _HomePageState extends State<HomePage> {
         _buildCard("IMC Médio por Faixa Etária", data['imcPorFaixaEtaria']),
         _buildCard("Percentual de Obesos", data['percentualObesos']),
         _buildCard("Média de Idade por Tipo Sanguíneo", data['idadePorSangue']),
-        _buildCard(
-            "Possíveis Doadores por Tipo Sanguíneo", data['possiveisDoadores']),
+        _buildCard("Possíveis Doadores por Tipo Sanguíneo", data['possiveisDoadores']),
       ];
     });
   }

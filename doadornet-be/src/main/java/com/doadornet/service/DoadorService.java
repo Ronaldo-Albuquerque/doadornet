@@ -1,21 +1,30 @@
 package com.doadornet.service;
 
-import java.util.List;
-
-// import org.hibernate.mapping.List;
+import com.doadornet.model.Doador;
+import com.doadornet.repository.DoadorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.doadornet.entity.Doador;
-import com.doadornet.repository.DoadorRepository;
-
-import lombok.RequiredArgsConstructor;
+import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class DoadorService {
-    private final DoadorRepository doadorRepository;
+
+    @Autowired
+    private DoadorRepository repository;
 
     public List<Doador> listarTodos() {
-        return doadorRepository.findAll();
+        return repository.findAll();
+    }
+
+    public Doador salvar(Doador doador) {
+        if (doador.getDataNasc() == null) {
+            throw new IllegalArgumentException("A data de nascimento não pode ser nula");
+        }
+        return repository.save(doador);
+    }
+
+    public void deleteAll() {
+        repository.deleteAll();
     }
 }

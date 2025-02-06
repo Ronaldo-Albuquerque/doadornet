@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://mysql:3306/doadornet_db
-    username: user
-    password: password
+    url: jdbc:mysql://mysql:3306/doadornet
+    username: doadornet
+    password: doadornet
     driver-class-name: com.mysql.cj.jdbc.Driver
   h2:
     console:

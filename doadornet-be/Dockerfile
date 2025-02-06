@@ -21,7 +21,6 @@ RUN ls -l /app/target
 # Usar a imagem do OpenJDK para rodar a aplicação
 FROM openjdk:17-slim
 
-
 RUN export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$PATH
 
@@ -29,7 +28,7 @@ ENV PATH=$JAVA_HOME/bin:$PATH
 WORKDIR /app
 
 # Copiar o jar gerado no estágio de build para o container
-COPY --from=build /app/target/doadornet-be-*.jar /app/doadornet-be.jar
+COPY --from=build /app/target/doadornet-be-1.0-SNAPSHOT.jar /app/doadornet-be.jar
 
 # Definir a porta que a aplicação vai expor
 EXPOSE 8080
